@@ -11,13 +11,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/monster1_head"
+        android:adjustViewBounds="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+    <ImageView
+        android:id="@+id/body_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/monster1_body"
+        app:layout_constraintTop_toBottomOf="@id/head_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <ImageView
+        android:id="@+id/feet_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/monster1_feet"
+        app:layout_constraintTop_toBottomOf="@id/body_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/match_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feet_image_view"
+        app:layout_constraintBottom_toTopOf="@id/shuffle_Button" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/shuffle_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/match_monsters_button_text"
